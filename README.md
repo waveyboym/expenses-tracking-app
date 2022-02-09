@@ -1,9 +1,9 @@
 # expenses-tracking-app
-A basic expenses tracking app that allows unique users to log in and enter personalized budgets  and various expenses and to keep track and budget plan. Also included is a line graph imported from chart.js which gives an overview with dates and prices for the various expenses entered
-
-How to use this app
-//////////////////////////////////////////////////////////////
-1/Download XAMPP.
+A basic expenses tracking app that allows unique users to log in and enter personalized budgets  and various expenses and to keep track and budget plan. Also included is a line graph imported from chart.js which gives an overview with dates and prices for the various expenses entered\
+\
+How to use this app\
+//////////////////////////////////////////////////////////////\
+1. Download XAMPP.
 2. Open XAMPP and click start for the Apache and MySQL modules.
 3. Download the entire file on my github named "ExpenseTrackingApp" and go to local disk/xampp/htdocs and save it there. You can change the name of this folder to whatever you want although do not leave spaces between the naming and please remember the name of the folder as you will use it later.
 4. Open your browser and type "localhost/ExpenseTrackingApp" or "localhost/<Name of your saved folder>" and press enter.
