@@ -1,8 +1,8 @@
 <?php
 session_start();
-include "../appHomePage/databaseClass/addtodatabase.php";
+include "../appHomePage/databaseClass/modifydatabase.php";
 
-class changeUserData extends addtodatabase{
+class changeUserData extends modifydatabase{
 
     protected function addData($IconName, $ExpensePrice, $dateLogged , $userId){
         $databaseAccess = $this->connect()->prepare('INSERT INTO expenses (expenses_icon_name, expenses_price, date_logged, EXPENSES_ID) VALUES (?, ?, ?, ?);');
