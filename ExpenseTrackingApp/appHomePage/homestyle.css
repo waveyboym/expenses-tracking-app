@@ -1,0 +1,628 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     M           Y                               C                O                  D                E 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+:root {
+    --white: white;
+    --textColorAlt: rgb(148, 102, 255);
+    --background: rgba(255, 255, 255, 0.1);
+    --shadowForQuickSummary: 0 10px 25px rgba(0, 0, 0, 0.152);
+    --shadowForRectangularBar: 0 10px 25px rgba(0, 0, 0, 0.248);
+    --progressBarColours: linear-gradient(to right top, rgba(95, 34, 238, 0.597) ,rgb(141, 93, 255));
+    --submitButton: rgb(76, 0, 255);
+}
+
+.sand-background {
+    --white: rgb(194, 194, 194);
+    --textColorAlt: rgb(252, 178, 178);
+    --background: rgba(255, 255, 255, 0.1);
+    --shadowForQuickSummary: 0 10px 25px rgba(0, 0, 0, 0.152);
+    --shadowForRectangularBar: 0 10px 25px rgba(0, 0, 0, 0.248);
+    --progressBarColours: linear-gradient(to right top, rgba(238, 167, 34, 0.597) ,rgb(255, 93, 93));
+    --submitButton: rgba(255, 144, 41, 0.741);
+    /* rgb(255, 102, 102)*/
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    background-image: url("backgroundPurple.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+.main-header {
+    width: 100vw;
+    height: 8%;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+}
+
+.main-header h1 {
+    margin-left: 5%;
+    margin-top: 0.7%;
+    width: 30%;
+    font-size: 30px;
+}
+
+.main-header h2 {
+    margin-left: 5%;
+    margin-top: 0.7%;
+    width: 40%;
+    font-size: 30px;
+}
+
+.switchThemes, .logout {
+    width: 5%;
+}
+
+.switchThemes ion-icon, .logout ion-icon{
+    margin-top: 18%;
+    font-size: 23px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.switchThemes ion-icon:hover, .logout  ion-icon:hover{
+    color: var(--textColorAlt);
+}
+
+.logout ion-icon{
+    margin-top: 15%;
+    font-size: 26px;
+}
+
+.username {
+    width: 10%;
+    display: flex;
+}
+
+.username ion-icon{ 
+    font-size: 26px;
+    margin-top: 7%;
+}
+
+.username h1{ 
+    font-size: 20px;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.quickSummary {
+    margin-top: 3%;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 20vh;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.budgeted-amount, .spent-amount, .amount-left{
+    width: 32%;
+    height: 100%;
+    margin-left: 2%;
+    background: var(--background);
+    box-shadow: var(--shadowForQuickSummary);
+    backdrop-filter: blur(5px);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.budgeted-amount {
+    margin-left: 0%;
+}
+
+.amount-left {
+    margin-right: 0%;
+}
+
+.budgeted-amount h1{
+    margin-top: 5%;
+    font-size: 30px;
+}
+
+.budgeted-amount h2{
+    margin-top: 6%;
+    font-size: 40px;
+}
+
+.first-half1, .first-half2{
+    display: flex;
+    text-align: center;
+}
+
+.spent-amount .first-half1 h1 {
+    font-size: 25px;
+    margin-top: 8%;
+    margin-left: 7%;
+}
+
+.spent-amount .first-half1 h2 {
+    font-size: 27px;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+.amount-left .first-half2 h1 {
+    font-size: 25px;
+    margin-top: 8%;
+    margin-left: 7%;
+}
+
+.amount-left .first-half2 h2 {
+    font-size: 27px;
+    margin-top: 8%;
+    margin-left: 4%;
+}
+
+.second-half{
+    margin-top: 8%;
+    width: 100%;
+}
+
+.rectangular-bar {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    background: var(--backgroundForQuickSummary);
+    backdrop-filter: blur(3px);
+    box-shadow: var(--shadowForRectangularBar);
+}
+
+.progress-bar1, .progress-bar2{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background: var(--progressBarColours);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.progress-bar1 {
+    width: 0%;
+}
+
+.progress-bar2{
+    width: 0%;
+}
+
+.main-content {
+    margin-top: 1.35%;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    height: 57vh;
+    margin-bottom: 3%;
+    display: flex; 
+    transition: all 0.5s ease-in-out;
+}
+
+.expenses-area {
+    width: 55%;
+    margin-right: 2%;
+    box-shadow: var(--shadowForRectangularBar);
+    backdrop-filter: blur(5px);
+    background: var(--background);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.expenses-area h1, .expenses-area h2{
+    margin-top: 2%;
+    width: 50%;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.expenses-area h1:hover, .expenses-area h2:hover{
+    opacity: 0.8;
+}
+
+.expenses-area h1{
+    float: left;
+}
+
+.expenses-area h2{
+    color: var(--textColorAlt);
+    float: right;
+}
+
+.tiles {
+    width: 100%;
+    max-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    min-height: min-content;
+}
+
+.add-new-expense, .expense{
+    margin-left: 4.2%;
+    width: 28%;
+    height: 13vh;
+    backdrop-filter: blur(5px);
+    background: var(--background);
+    border-radius: 8px;
+    margin-top: 4.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-new-expense ion-icon{
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.add-new-expense ion-icon:hover{
+    color: var(--textColorAlt);
+}
+
+.expense h1 {
+    text-align: center;
+    line-height: 20px;
+    color: var(--textColorAlt);
+}
+
+.expense h1:hover {
+    cursor: text;
+    opacity: 1;
+}
+
+.expense ion-icon {
+    font-size: 35px;
+}
+
+.more-options {
+    width: 43%;
+    height: 100%;
+}
+
+.change-budget {
+    width: 100%;
+    height: 21.5vh;
+    border-radius: 8px;
+    display: flex;
+}
+
+.graph {
+    padding-top: 1%;
+    margin-top: 4%;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadowForRectangularBar);
+    background: var(--background);
+    border-radius: 8px;
+}
+
+.budget-img {
+    width: 58%;
+    background-image: url("funExpense.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-right: 2%;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadowForRectangularBar);
+}
+
+.input-area {
+    margin-left: 2%;
+    width: 38%;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadowForRectangularBar);
+    background: var(--background);
+    border-radius: 8px;
+}
+
+.input-area input[type="text"]{
+    width: 90%;
+    margin-left: 4%;
+    margin-right: 6%;
+    margin-top: 16%;
+    border: none;
+    outline: none;
+    background: var(--background);
+    font-size: 16px;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    border-radius: 5px;
+}
+
+.input-area input[type="text"]::placeholder{
+    color: rgb(136, 136, 136);
+}
+
+.input-area button[type="submit"]{
+    background-color: var(--submitButton);
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 14%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    border-radius: 5px;
+}
+
+.input-area button[type="submit"]:hover{
+    opacity: 0.7;
+}
+
+.overview-expense{
+    width: 100%;
+    max-height: 50vh;
+    overflow: auto;
+    min-height: min-content;
+}
+
+.expense-line-form {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 5vh;
+    backdrop-filter: blur(5px);
+    background: var(--background);
+    border-radius: 8px;
+    margin-top: 2.5%;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+
+.expense-line-form p{
+    margin-left: 4%;
+}
+
+.expense-line-form ion-icon{
+    margin-left: 9%;
+}
+
+.expense-line-form h3{
+    margin-left: 1%;
+    width: 65%;
+}
+
+.expense-line-form h4{
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+.expense-line-form h4:hover{
+    color: red;
+}
+
+/*hidden divs until onclick event*/
+
+.selectNewExpense {
+    position: fixed;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.809);
+    height: 100vh;
+    z-index: 2;
+}
+
+.close-div {
+    width: 7.2vh;
+    margin-left: 47.4vw;
+    margin-right: 47.4vw;
+    height: 7.2vh;
+    margin-top: 15vh;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadowForRectangularBar);
+    background: var(--background);
+}
+
+.close-div:hover {
+    background: var(--white);
+}
+
+.close-div ion-icon{
+    font-size: 45px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.close-div ion-icon:hover{
+    color: black;
+}
+
+.add-expense {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    height: 50vh;
+    margin-top: 3vh;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadowForRectangularBar);
+    background: var(--background);
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2.8vh;
+}
+
+.expense-tabs{
+    background-color: var(--background);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    margin-left: 3.3%;
+    width: 16%;
+    margin-top: 2.8%;
+    text-align: center;
+    max-height: min-content; 
+    cursor: pointer;
+}
+
+.expense-tabs ion-icon {
+    margin-top: 17%;
+    font-size: 27px;
+}
+
+.expense-tabs:hover  {
+    color: var(--textColorAlt);
+}
+
+.priceSection {
+    position: fixed;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.809);
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-input-area{
+    width: 30%;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadowForRectangularBar);
+    background: var(--background);
+    border-radius: 8px;
+}
+
+.price-input-area input[type="text"]{
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 3%;
+    margin-top: 2%;
+    border: none;
+    outline: none;
+    background: var(--background);
+    font-size: 16px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 5px;
+}
+
+.price-input-area input[type="text"]::placeholder{
+    color: rgb(136, 136, 136);
+}
+
+.price-input-area button[type="submit"]{
+    background-color: var(--submitButton);
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 2%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+
+.price-input-area button[type="submit"]:hover{
+    opacity: 0.7;
+}
