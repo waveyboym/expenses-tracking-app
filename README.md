@@ -1,7 +1,7 @@
 # preview images
 ![landingpage](landingpage.png "login signup page")
 
-![lighttheme](lighttheme.png "light mode theme")
+![dashboard](dashboard.png "dashboard")
 
 # access app without downloading the files here
 /
