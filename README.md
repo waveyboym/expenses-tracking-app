@@ -4,7 +4,7 @@
 ![dashboard](dashboard.png "dashboard")
 
 # access app without downloading the files here
-/
+https://expensestrackingapp-waveyboym.herokuapp.com/
 
 *please do not use your real email, use an arbitrary email such as "abcd@gmail.com" and do not use any personal passwords. rather generate a password on this site: https://passwordsgenerator.net/ and use that instead.*
 
