@@ -300,7 +300,7 @@
                 "symfony/validator": "^4.0",
                 "symfony/var-dumper": "^4.0",
                 "symfony/web-link": "^4.0",
-                "twig/twig": "^2.0"
+                "twig/twig": "2.15.3"
             },
             "type": "library",
             "extra": {
@@ -883,7 +883,7 @@
                 "symfony/console": ">=5",
                 "symfony/dependency-injection": "<4.3",
                 "symfony/translation": "<4.2",
-                "twig/twig": "<1.43|<2.13,>=2"
+                "twig/twig": "2.15.3"
             },
             "provide": {
                 "psr/log-implementation": "1.0|2.0"
@@ -904,7 +904,7 @@
                 "symfony/templating": "^3.4|^4.0|^5.0",
                 "symfony/translation": "^4.2|^5.0",
                 "symfony/translation-contracts": "^1.1|^2",
-                "twig/twig": "^1.43|^2.13|^3.0.4"
+                "twig/twig": "2.15.3"
             },
             "suggest": {
                 "symfony/browser-kit": "",
@@ -1718,7 +1718,7 @@
             },
             "require": {
                 "php": "^5.5.9|>=7.0.8",
-                "twig/twig": "^1.41|^2.10"
+                "twig/twig": "2.15.3"
             },
             "conflict": {
                 "symfony/console": "<3.4",
@@ -1833,7 +1833,7 @@
                 "symfony/console": "^4.4|^5.0|^6.0",
                 "symfony/process": "^4.4|^5.0|^6.0",
                 "symfony/uid": "^5.1|^6.0",
-                "twig/twig": "^2.13|^3.0.4"
+                "twig/twig": "2.15.3"
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
